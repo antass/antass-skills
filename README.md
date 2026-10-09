@@ -8,10 +8,10 @@ Ania's custom Claude skills — one source of truth.
 |---|---|---|---|
 | `notabene` (`/nb`) | "btw …" asides → timestamped bullet in Notion daily log | Claude Code (global) | symlink via `install.sh` |
 | `air-fryer` | Oven → air fryer conversion, cook & defrost settings (Cosori TurboBlaze) | Claude Code (Hobbies folder) | symlink via `install.sh` |
-| `grocery-price-check` | 6-store price check for 02128 → Notion grocery guide | claude.ai / Cowork | upload zip |
-| `grocery-weekly-ad` | Weekly ad via Flipp → aisle-sorted deal list | claude.ai / Cowork | upload zip |
-| `work-intake` | Email/Teams request → scoped Work project + Notion tasks | claude.ai / Cowork | upload zip |
-| `work-update` | Route new info into an existing Work project | claude.ai / Cowork | upload zip |
+| `grocery-price-check` | 6-store price check for 02128 → Notion grocery guide | claude.ai / Cowork; Claude Code (Hobbies folder) | upload zip; symlink via `install.sh` |
+| `grocery-weekly-ad` | Weekly ad via Flipp → aisle-sorted deal list | claude.ai / Cowork; Claude Code (Hobbies folder) | upload zip; symlink via `install.sh` |
+| `work-intake` | Email/Teams request → scoped Work project + Notion tasks | claude.ai / Cowork; Claude Code (`~/Projects`) | upload zip; symlink via `install.sh` |
+| `work-update` | Route new info into an existing Work project | claude.ai / Cowork; Claude Code (`~/Projects`) | upload zip; symlink via `install.sh` |
 
 `third-party/` — skills written by others:
 - `cal-newport` — Cal Newport deep-work persona (manual `/cal-newport`) · Claude Code (global), symlinked via `install.sh`
@@ -25,6 +25,11 @@ Ania's custom Claude skills — one source of truth.
 ```bash
 ./install.sh
 ```
+
+**Where Claude Code skills are linked** (`install.sh`)
+- Global `~/.claude/skills` — `nb`, `cal-newport`, `file-organizer`
+- Personal `Cowork OS/Hobbies/.claude/skills` — `air-fryer`, grocery skills (skipped on Servier systems — detected via `USER_EMAIL` / `CONNECT_SERVER` containing `servier.com` — and on machines without Cowork OS)
+- Work `~/Projects/.claude/skills` — `work-intake`, `work-update`. Claude Code walks up parent folders for skills but stops at a git repo root, so these don't load inside git repos under `~/Projects`.
 
 **Edit a Claude Code skill** — edit `skills/<name>/SKILL.md` (or `third-party/<name>/`) here; it's live immediately (symlinked). Then commit.
 
