@@ -6,18 +6,17 @@ set -euo pipefail
 REPO="$(cd "$(dirname "$0")" && pwd)"
 COWORK="$HOME/Library/Mobile Documents/com~apple~CloudDocs/Cowork OS"
 
-# skill path (relative to repo) -> target skills directory
+# skill path (relative to repo) | target skills directory [| link name, i.e. the /slash command]
 LINKS=(
-  "skills/notabene|$HOME/.claude/skills"
+  "skills/notabene|$HOME/.claude/skills|nb"
   "skills/air-fryer|$COWORK/Hobbies/.claude/skills"
   "third-party/cal-newport|$HOME/.claude/skills"
   "third-party/file-organizer|$HOME/.claude/skills"
 )
 
 for entry in "${LINKS[@]}"; do
-  path="${entry%%|*}"
-  dir="${entry#*|}"
-  name="$(basename "$path")"
+  IFS='|' read -r path dir name <<< "$entry"
+  name="${name:-$(basename "$path")}"
   src="$REPO/$path"
   dest="$dir/$name"
   mkdir -p "$dir"

@@ -1,10 +1,10 @@
 ---
-name: notabene
+name: nb
 description: Auto-invoke when Ania sends a short aside that is clearly a "don't let me forget this" thought rather than a request — typically starting with "btw", "by the way", "oh, and", or similar, e.g. "btw need to reorder the kids' vitamins" or "by the way, ask the roofer about the flashing." Captures the thought verbatim as a timestamped bullet in her Notion daily log so it isn't lost, then confirms in one short line. Do NOT invoke this for a message that starts with "by the way" as a transition into a real question or task that needs actual work right now (e.g. "by the way, can you also fix the header bug") — only for genuine side-thoughts meant to be stashed for later. NOTE: this is a natural-language auto-trigger only — it is deliberately NOT named "btw" because Claude Code has a separate built-in `/btw` slash command (ask a side question without interrupting current work). Never invoke this skill for a message starting with a literal "/btw" — that always belongs to the built-in command.
 argument-hint: "<the thought to capture>"
 ---
 
-# notabene (a.k.a. "btw") — quick thought capture
+# notabene (`/nb`, a.k.a. "btw") — quick thought capture
 
 Purpose: zero-friction capture of a passing thought into Ania's Notion daily log, so she can immediately drop it and keep going. This is NOT a task to act on now — do not research it, do not turn it into a to-do, do not ask clarifying/categorization questions. Speed and low friction are the entire point.
 

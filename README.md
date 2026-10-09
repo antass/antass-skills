@@ -6,7 +6,7 @@ Ania's custom Claude skills — one source of truth.
 
 | Skill | What it does | Runs in | How it's installed |
 |---|---|---|---|
-| `notabene` | "btw …" asides → timestamped bullet in Notion daily log | Claude Code (global) | symlink via `install.sh` |
+| `notabene` (`/nb`) | "btw …" asides → timestamped bullet in Notion daily log | Claude Code (global) | symlink via `install.sh` |
 | `air-fryer` | Oven → air fryer conversion, cook & defrost settings (Cosori TurboBlaze) | Claude Code (Hobbies folder) | symlink via `install.sh` |
 | `grocery-price-check` | 6-store price check for 02128 → Notion grocery guide | claude.ai / Cowork | upload zip |
 | `grocery-weekly-ad` | Weekly ad via Flipp → aisle-sorted deal list | claude.ai / Cowork | upload zip |
