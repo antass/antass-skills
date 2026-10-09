@@ -8,7 +8,7 @@ COWORK="$HOME/Library/Mobile Documents/com~apple~CloudDocs/Cowork OS"
 
 # skill path (relative to repo) -> target skills directory
 LINKS=(
-  "skills/quick-thought-capture|$HOME/.claude/skills"
+  "skills/notabene|$HOME/.claude/skills"
   "skills/air-fryer|$COWORK/Hobbies/.claude/skills"
   "third-party/cal-newport|$HOME/.claude/skills"
   "third-party/file-organizer|$HOME/.claude/skills"
