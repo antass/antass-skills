@@ -18,6 +18,7 @@ fi
 # skill path (relative to repo) | target skills directory [| link name, i.e. the /slash command]
 LINKS=(
   "skills/notabene|$GLOBAL|nb"
+  "skills/worklog|$GLOBAL"
   "third-party/cal-newport|$GLOBAL"
   "third-party/file-organizer|$GLOBAL"
   "skills/air-fryer|$PERSONAL"

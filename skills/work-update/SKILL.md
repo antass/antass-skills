@@ -137,6 +137,8 @@ If Ania says "debrief", "what changed today", "log this session", or is clearly 
 
 Be selective. A debrief that files twelve entries is a debrief that files nothing useful. Three good ones beat twelve.
 
+**Boundary with `worklog`.** That skill records work that went *out* of the session — what shipped, what's in flight, what was tried and abandoned — into the project's `worklog.md`. This one routes information that came *in* from outside: an email, a spec change, a stakeholder's decision, a new dataset. A wrap-up usually contains both; split it, hand the session record to `worklog`, and file only the incoming half here. `decisions.md`, `sources.md` and `CLAUDE.md` stay owned by this skill in either case.
+
 ---
 
 ## FILE / DATA MODE
